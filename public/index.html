@@ -284,8 +284,8 @@
  <label class="full">Cuéntanos tu idea<textarea name="idea" id="field-idea" aria-describedby="count-idea" rows="4" placeholder="Qué te gustaría representar en el mural"></textarea><span class="estimate-note" id="count-idea">Máximo 200 palabras · Quedan 200 palabras</span></label>
  <label class="full">Comentarios o apoyos que necesitas<textarea name="comentarios" id="field-comentarios" aria-describedby="count-comentarios" rows="3" placeholder="Puedes indicar materiales o ayuda para participar"></textarea><span class="estimate-note" id="count-comentarios">Máximo 200 palabras · Quedan 200 palabras</span></label>
  </div></fieldset>
- <p class="estimate-note">Las inscripciones en línea aún no están habilitadas. Este formulario es una vista previa y no envía datos.</p>
- <div><button type="submit" class="primary" id="register-submit" disabled>Inscripciones próximamente</button></div>
+ <p class="estimate-note">Los datos se usarán para organizar este concurso y se guardarán de forma privada en Google Sheets. Recibirás una confirmación en el correo indicado. Evita incluir información sensible en los comentarios.</p>
+ <div><button type="submit" class="primary" id="register-submit">Guardar inscripción</button></div>
  <p id="registration-status" role="status" aria-live="polite" tabindex="-1" style="margin:0"></p>
  </form>
 </section>
@@ -535,8 +535,7 @@ const registrationForm=document.getElementById('registration-form');
 let registrationKey=crypto.randomUUID ? crypto.randomUUID() : Date.now()+'-'+Math.random().toString(36).slice(2);
 registrationForm.addEventListener('input',()=>{document.getElementById('registration-status').textContent='';});
 registrationForm.addEventListener('submit',async event=>{
- event.preventDefault();document.getElementById('registration-status').textContent='Las inscripciones en línea aún no están habilitadas.';return;
- if(!registrationForm.reportValidity())return;
+ event.preventDefault();if(!registrationForm.reportValidity())return;
  const status=document.getElementById('registration-status');const button=document.getElementById('register-submit');
  const data=Object.fromEntries(new FormData(registrationForm));
  if(['nombre','curso','correo','telefono'].some(key=>!data[key].trim())){status.textContent='Completa nombre, curso, correo y teléfono para continuar.';return;}
@@ -544,7 +543,7 @@ registrationForm.addEventListener('submit',async event=>{
  try{const response=await fetch('/api/inscripciones',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...data,id:registrationKey})});
  const result=await response.json();if(!response.ok)throw new Error(result.error||'No se pudo guardar.');
  status.textContent='¡Inscripción guardada! Tu comprobante es '+result.codigo+'.';registrationForm.reset();registrationKey=crypto.randomUUID ? crypto.randomUUID() : Date.now()+'-'+Math.random().toString(36).slice(2);status.focus();
- }catch(error){status.textContent='No se pudo guardar la inscripción. Verifica que la web esté abierta desde el servidor de la organización e inténtalo otra vez. Tus datos siguen en el formulario.';}
+ }catch(error){status.textContent='No se pudo guardar la inscripción. Revisa tu conexión e inténtalo otra vez. Tus datos siguen en el formulario.';}
  finally{button.disabled=false;}
 });
 </script><script>
