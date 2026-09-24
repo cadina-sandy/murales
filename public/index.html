@@ -1,0 +1,560 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Muros que Hablan · Arte y comunidad</title><meta name="description" content="Un proyecto escolar de arte comunitario. Explora el concurso, planifica la pintatón y calcula tu presupuesto."><style>
+:root{--on-surface:#182340;--on-surface-variant:#596278;--accent-fixed:#294ddf;--stroke-default:#dfe3ed;color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f3f5fa;color:var(--on-surface);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,a,input{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;transition:transform .2s,background .2s}button:hover{transform:translateY(-2px)}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ef9c38;outline-offset:4px}button{border:1px solid #dfe3ed;background:white;border-radius:12px;padding:12px 18px;color:inherit}.widget-container{max-width:1200px;margin:auto;padding:0 36px 64px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:26px 0}.brand{font-size:28px;font-weight:900;color:#254bdf;text-decoration:none;display:flex;align-items:center;letter-spacing:-2px}.brand>span{color:#17213c}.brand small{font-size:11px;letter-spacing:1.4px;margin-left:16px}.topnote{font-size:13px;color:#596278}.hero-banner{position:relative;overflow:hidden;background:#244bdd;border-radius:24px;padding:44px 48px;color:white;isolation:isolate}.hero-banner:after{content:"";position:absolute;z-index:-1;width:440px;height:440px;border:65px solid #4769ef;border-radius:50%;right:-150px;top:-140px}.hero-badge{font-size:12px;font-weight:700;letter-spacing:2px;color:#d9e4ff}.hero-title{font-size:clamp(56px,7.5vw,94px);line-height:.98;letter-spacing:-5px;margin:24px 0}.hero-title em{font-style:normal;color:#d8f36a}.hero-subtitle{max-width:510px;color:#e0e7ff;font-size:17px;margin:0}.hero-actions{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}.primary{background:#dcf77e;border-color:#dcf77e;color:#182340;font-weight:700}.secondary{background:transparent;color:white;border-color:#8098fa}.hero-stamp{position:absolute;right:75px;top:115px;transform:rotate(8deg);font-size:42px;font-weight:300;line-height:1.1;letter-spacing:-2px;border-left:4px solid #d8f36a;padding-left:24px}.hero-stamp b{color:#d8f36a}.nav-tabs-wrapper{position:sticky;top:0;z-index:4;background:#f3f5faf5;padding:22px 0 18px;overflow:auto;scroll-margin-top:0}.nav-tabs{display:flex;gap:6px;min-width:max-content;border-bottom:1px solid #dfe3ed;padding-bottom:12px}.tab-btn{border:0;background:transparent;font-size:14px;font-weight:600;padding:11px 20px;color:#596278}.tab-btn.is-active{color:white;background:#182340}.tab-panel{display:none;gap:22px;flex-direction:column}.tab-panel.is-active{display:flex;animation:enter .3s ease}@keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}.kpi-grid,.calc-results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.kpi-card{padding:22px 20px;border-right:1px solid #dfe3ed;display:flex;flex-direction:column}.kpi-card:last-child{border:0}.kpi-val{font-size:30px;letter-spacing:-1.5px;font-weight:750}.kpi-lbl{font-size:13px;color:#596278}.info-card{background:white;border:1px solid #e2e6ef;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:16px}.info-card-header{display:flex;justify-content:space-between;gap:16px;align-items:center}.lumi-headline-s{font-size:22px;line-height:1.3;letter-spacing:-.6px}.lumi-body-s,.lumi-body-m{font-size:16px}.tag-pill{font-size:12px;align-self:flex-start;background:#edf1ff;color:#294ddf;padding:5px 10px;border-radius:7px;white-space:nowrap;font-weight:600}.card-deck{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.card-deck .info-card{border-top:4px solid #4363dc}.card-deck .info-card:nth-child(2){border-top-color:#a9c73f}.card-deck .info-card:nth-child(3){border-top-color:#f7aa63}li{margin:12px 0}.timeline-list{background:white;border-radius:20px;padding:12px 28px}.timeline-item{display:flex;gap:24px;padding:24px 0;border-bottom:1px solid #e4e8ef}.timeline-item:last-child{border:0}.timeline-badge{flex:0 0 62px;height:62px;display:grid;place-items:center;background:#edf1ff;color:#294ddf;font-weight:700;border-radius:16px}.timeline-content{display:flex;flex-direction:column;gap:8px}.calc-container{background:white;border:1px solid #dfe3ed;border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:26px}.calc-inputs{display:grid;grid-template-columns:1fr 1fr;gap:40px}.calc-row label{font-weight:600}.lumi-code{color:#294ddf}.lumi-slider{width:100%;accent-color:#294ddf;height:28px;cursor:pointer;margin-top:16px}.wall-preview{height:260px;border-radius:16px;background-color:#edf1fa;background-image:linear-gradient(#dce3f3 1px,transparent 1px),linear-gradient(90deg,#dce3f3 1px,transparent 1px);background-size:22px 22px;display:flex;align-items:center;justify-content:center;overflow:hidden}.wall-mural-sim{display:flex;align-items:center;justify-content:center;background:#294ddf;color:white;box-shadow:8px 8px 0 #aec735;font-size:14px;max-height:225px;min-height:35px;transition:width .2s,aspect-ratio .2s;text-align:center;overflow:hidden}.result-box{background:#f1f4fa;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px}.result-label{font-size:13px;color:#596278}.result-num{font-size:24px;font-weight:750;letter-spacing:-1px}.result-box.highlight{background:#dff38c}.result-box.highlight .result-label{color:#384419}.table-wrapper{overflow:auto}.cost-table{border-collapse:collapse;width:100%;font-size:14px}.cost-table th{text-align:left;color:#596278;font-size:12px;text-transform:uppercase;letter-spacing:.7px}.cost-table td,.cost-table th{padding:16px 12px;border-bottom:1px solid #e3e7ef}.num{text-align:right;white-space:nowrap}.presets{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.presets span{font-size:14px;color:#596278;margin-right:6px}.presets button{font-size:13px;padding:8px 12px}.estimate-note{font-size:13px;color:#596278;margin:0}.download{align-self:flex-start;color:#294ddf}footer{border-top:1px solid #dfe3ed;padding:24px 36px;max-width:1128px;margin:auto;font-size:12px;letter-spacing:1px;display:flex;justify-content:space-between}footer span{letter-spacing:0;color:#596278}@media(max-width:800px){.hero-stamp{display:none}.hero-title{letter-spacing:-3px}.kpi-grid,.calc-results-grid{grid-template-columns:1fr 1fr}.kpi-card:nth-child(2){border:0}.calc-inputs{gap:20px}.tab-btn{padding:10px 14px}}@media(max-width:520px){.widget-container{padding:0 18px 40px}.topnote{display:none}.hero-banner{padding:30px 24px}.hero-title{font-size:64px}.hero-badge{font-size:10px;letter-spacing:1px}.hero-subtitle{font-size:16px}.hero-actions button{width:100%}.kpi-card{padding:12px 8px}.kpi-val{font-size:26px}.info-card,.calc-container{padding:20px}.info-card-header{align-items:flex-start;flex-direction:column}.calc-inputs{grid-template-columns:1fr}.result-num{font-size:22px}.result-box{padding:12px}.timeline-list{padding:8px 18px}.timeline-item{gap:14px}.timeline-badge{flex-basis:50px;height:50px}.cost-table{min-width:620px}.wall-preview{height:200px}footer{padding:20px 18px;font-size:10px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.timeline-content{flex:1;min-width:0}.day-heading{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;justify-content:space-between}.day-form{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.day-form label{font-size:14px}.day-form select{font:inherit;font-size:14px;background:#fff;color:#182340;border:1px solid #cbd3e3;border-radius:10px;padding:10px;max-width:100%;min-height:44px}.day-form button{background:#294ddf;color:white;font-size:14px;padding:10px 16px;min-height:44px}.day-form select:focus-visible{outline:3px solid #ef9c38;outline-offset:3px}.day-status{font-size:13px;color:#405579;flex-basis:100%}.day-status:empty{display:none}@media(max-width:520px){.day-form{width:100%}.day-form label{flex-basis:100%}}
+/* Controles de días alineados en las tres etapas. */
+.day-heading{display:grid;grid-template-columns:minmax(0,1fr) 290px;align-items:start;gap:16px 24px}
+.day-form{display:grid;grid-template-columns:28px minmax(0,1fr) 88px;align-items:center;gap:8px;width:100%;margin:0}
+.day-form select{width:100%;min-width:0}
+.day-form button{width:100%;margin:0}
+.day-status{grid-column:2 / -1}
+@media(max-width:800px){.day-heading{grid-template-columns:minmax(0,1fr)}.day-form{max-width:360px}}
+@media(max-width:520px){.day-form{grid-template-columns:minmax(0,1fr) 88px}.day-form label{grid-column:1 / -1}.day-status{grid-column:1 / -1}}
+.registration-form{gap:26px}.registration-form fieldset{border:0;padding:0;margin:0;min-width:0}.registration-form legend{font-size:19px;font-weight:700;margin-bottom:16px}.registration-form legend span{font-size:14px;font-weight:400;color:#596278}.registration-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.registration-grid label{display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600}.registration-grid input,.registration-grid select,.registration-grid textarea{font:inherit;font-weight:400;font-size:16px;border:1px solid #cbd3e3;border-radius:10px;padding:12px;background:white;color:#182340;width:100%;min-width:0}.registration-grid textarea{resize:vertical}.registration-grid .full{grid-column:1/-1}.required{font-size:12px;color:#596278;font-weight:400}.registration-form button:disabled{opacity:.6;cursor:wait}.registration-grid input:focus,.registration-grid select:focus,.registration-grid textarea:focus{outline:2px solid #294ddf;outline-offset:2px}@media(max-width:600px){.registration-grid{grid-template-columns:1fr}}
+.tab-btn[data-tab="inscripcion"]{font-weight:800;color:#244bdd;background:#e4eaff;transform-origin:center}
+.tab-btn[data-tab="inscripcion"]:not(.registration-visited){animation:registration-pulse 1.8s ease-in-out infinite}
+.tab-btn[data-tab="inscripcion"].registration-visited{background:#dcf77e;color:#182340;font-weight:800;animation:none}
+.tab-btn[data-tab="inscripcion"].registration-visited:hover{background:#dcf77e}
+@keyframes registration-pulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(41,77,223,.2)}50%{transform:scale(1.035);box-shadow:0 0 0 5px rgba(41,77,223,0)}}
+@media(prefers-reduced-motion:reduce){.tab-btn[data-tab="inscripcion"]:not(.registration-visited){animation:none}}
+</style></head><body>
+  <div class="widget-container"><div class="topbar"><a href="#inicio" class="brand">M<span>H</span> <small>MUROS QUE HABLAN</small></a><span class="topnote">Una creación colectiva</span></div>
+    
+    <!-- Header Banner -->
+    <header class="hero-banner">
+      <span class="hero-badge">ARTE + COMUNIDAD / PROYECTO ESCOLAR</span>
+      <h1 class="hero-title">Muros que<br><em>hablan.</em></h1>
+      <p class="lumi-body-m hero-subtitle">Transformación del espacio escolar mediante arte comunitario, identidad e inclusión.</p>
+    <div class="hero-actions"><button class="primary" data-go="calculadora">Diseña tu presupuesto ↗</button><button class="secondary" data-go="concurso">Explora el concurso</button></div><div class="hero-stamp" aria-hidden="true">Un muro.<br>Muchas<br><b>voces.</b></div></header>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs-wrapper">
+      <nav class="nav-tabs">
+        <button class="tab-btn is-active" data-tab="inicio">El proyecto</button>
+        <button class="tab-btn" data-tab="concepto">Los ejes</button>
+        <button class="tab-btn" data-tab="concurso">El concurso</button>
+        <button class="tab-btn" data-tab="pintaton">La pintatón</button>
+        <button class="tab-btn" data-tab="calculadora">Presupuesto</button>
+        <button class="tab-btn" data-tab="cronograma">Cronograma</button>
+<button class="tab-btn" data-tab="inscripcion">Inscripción al concurso</button>
+      </nav>
+    </div>
+
+    <!-- TAB 1: RESUMEN / INICIO -->
+    <section id="panel-inicio" class="tab-panel is-active">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <span class="kpi-val" id="summary-area">30 m²</span>
+          <span class="kpi-lbl">Muro Seleccionado</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-val">100+</span>
+          <span class="kpi-lbl">Estudiantes Participantes</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-val">6 Semanas</span>
+          <span class="kpi-lbl">Duración Total</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-val" id="summary-total"></span>
+          <span class="kpi-lbl">Presupuesto Est. (CLP)</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <h3 class="lumi-headline-s" style="margin:0;">Objetivo de la Propuesta</h3>
+          <span class="tag-pill">Impacto Escolar</span>
+        </div>
+        <p class="lumi-body-m" style="margin:0; color: var(--on-surface-variant);">
+          "Muros que Hablan" busca embellecer el patio central del establecimiento integrando el talento estudiantil y la participación comunitaria. A través de un concurso de diseño de bocetos y una jornada final de pintura participativa ("Pintatón"), se promueve el sentido de pertenencia a la escuela Julio Montt Salamanca.
+        </p>
+      </div>
+
+      <div class="card-deck">
+        <div class="info-card">
+          <h3 class="lumi-headline-s" style="margin:0;">Fase 1: Concurso de Bocetos</h3>
+          <p class="lumi-body-s" style="margin:0; color: var(--on-surface-variant);">
+            Estudiantes presentan propuestas gráficas según ejes temáticos institucionales. Un jurado multidisciplinario selecciona la obra ganadora.
+          </p>
+        </div>
+        <div class="info-card">
+          <h3 class="lumi-headline-s" style="margin:0;">Fase 2: Pintatón Participativa</h3>
+          <p class="lumi-body-s" style="margin:0; color: var(--on-surface-variant);">
+            Día interactivo donde el diseño se traza como "cuadrícula gigante" y es pintado de forma colectiva por estudiantes, apoderados y docentes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: CONCEPTO Y VALORES -->
+    <section id="panel-concepto" class="tab-panel">
+      <div class="info-card">
+        <h3 class="lumi-headline-s" style="margin:0;">Ejes Temáticos del Mural</h3>
+        <p class="lumi-body-m" style="margin:0; color: var(--on-surface-variant);">
+          Los bocetos concursantes deberán inspirarse en uno o más de los siguientes ejes institucionales:
+        </p>
+      </div>
+
+      <div class="card-deck">
+        <div class="info-card">
+          <span class="tag-pill">Eje 1</span>
+          <h3 class="lumi-headline-s" style="margin:0;">Identidad & Comunidad</h3>
+          <p class="lumi-body-s" style="margin:0; color: var(--on-surface-variant);">
+            Representación de la historia local, la diversidad cultural del colegio y los valores comunales.
+          </p>
+        </div>
+        <div class="info-card">
+          <span class="tag-pill">Eje 2</span>
+          <h3 class="lumi-headline-s" style="margin:0;">Medio Ambiente & Futuro</h3>
+          <p class="lumi-body-s" style="margin:0; color: var(--on-surface-variant);">
+            Cuidado del planeta, biodiversidad local y visión de sostenibilidad compartida.
+          </p>
+        </div>
+        <div class="info-card">
+          <span class="tag-pill">Eje 3</span>
+          <h3 class="lumi-headline-s" style="margin:0;">Inclusión & Convivencia</h3>
+          <p class="lumi-body-s" style="margin:0; color: var(--on-surface-variant);">
+            Buen trato, equidad de género, neurodiversidad y unión comunitaria en la vida escolar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: CONCURSO -->
+    <section id="panel-concurso" class="tab-panel">
+      <div class="card-deck">
+        <div class="info-card">
+          <h3 class="lumi-headline-s" style="margin:0;">¿Quiénes pueden participar?</h3>
+          <p class="lumi-body-m" style="margin:0; color: var(--on-surface-variant);">Puede participar cualquier alumno en compañía de algún docente, asistente de la educación, apoderado y/o familiar que desee ayudar.</p>
+        </div>
+
+
+        <div class="info-card">
+          <div class="info-card-header">
+            <h3 class="lumi-headline-s" style="margin:0;">Criterios de Evaluación</h3>
+            <span class="tag-pill">Pauta Jurado</span>
+          </div>
+          <ul class="lumi-body-m" style="margin: 4px 0 0 0; padding-left: 20px; color: var(--on-surface-variant);">
+            <li><strong>Coherencia Temática (30%):</strong> Relación con los ejes.</li>
+            <li><strong>Creatividad y Color (30%):</strong> Impacto visual y composición.</li>
+            <li><strong>Factibilidad de Traslado (40%):</strong> Viabilidad de llevarlo a muro.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: PINTATÓN -->
+    <section id="panel-pintaton" class="tab-panel">
+      <div class="info-card">
+        <h3 class="lumi-headline-s" style="margin:0;">Metodología de la Pintatón</h3>
+        <p class="lumi-body-m" style="margin:0; color: var(--on-surface-variant);">
+          Organización de la jornada participativa de pintura en el patio escolar (Sábado Comunitario, jornada extra curricular, taller de arte o clase de arte).
+        </p>
+      </div>
+
+      <div class="timeline-list">
+        <div class="timeline-item">
+          <div class="timeline-badge">01</div>
+          <div class="timeline-content">
+            <div class="day-heading"><strong class="lumi-body-m">Preparación del Muro</strong><form class="day-form" data-step="1"><label for="day-1">Día</label><select id="day-1" required><option value="">Selecciona un día</option><option>Lunes</option><option>Martes</option><option>Miércoles</option><option>Jueves</option><option>Viernes</option><option>Sábado</option><option>Domingo</option></select><button type="submit">Guardar</button><span class="day-status" role="status" aria-live="polite"></span></form></div>
+            <span class="lumi-body-s" style="color: var(--on-surface-variant);">Limpieza, fijación de sellador primario y proyección/trazado del boceto ganador en cuadrícula por el equipo de artes.</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">02</div>
+          <div class="timeline-content">
+            <div class="day-heading"><strong class="lumi-body-m">Pintado por Sectores · Mañana</strong><form class="day-form" data-step="2"><label for="day-2">Día</label><select id="day-2" required><option value="">Selecciona un día</option><option>Lunes</option><option>Martes</option><option>Miércoles</option><option>Jueves</option><option>Viernes</option><option selected>Sábado</option><option>Domingo</option></select><button type="submit">Guardar</button><span class="day-status" role="status" aria-live="polite"></span></form></div>
+            <span class="lumi-body-s" style="color: var(--on-surface-variant);">Asignación de zonas numeradas por paleta de colores. Grupos turnados de estudiantes y familias.</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">03</div>
+          <div class="timeline-content">
+            <div class="day-heading"><strong class="lumi-body-m">Detalles y Líneas de Contorno · Tarde</strong><form class="day-form" data-step="3"><label for="day-3">Día</label><select id="day-3" required><option value="">Selecciona un día</option><option>Lunes</option><option>Martes</option><option>Miércoles</option><option>Jueves</option><option>Viernes</option><option selected>Sábado</option><option>Domingo</option></select><button type="submit">Guardar</button><span class="day-status" role="status" aria-live="polite"></span></form></div>
+            <span class="lumi-body-s" style="color: var(--on-surface-variant);">Retoque fino y delineado a cargo del equipo organizador y docentes de artes para dar acabado profesional.</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">04</div>
+          <div class="timeline-content">
+            <strong class="lumi-body-m">Capa Protectora e Inauguración</strong>
+            <span class="lumi-body-s" style="color: var(--on-surface-variant);">Aplicación de barniz antigraffiti e inauguración oficial con la comunidad escolar.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: CALCULADORA Y PRESUPUESTO -->
+    <section id="panel-calculadora" class="tab-panel">
+      <div class="calc-container">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+          <div>
+            <h3 class="lumi-headline-s" style="margin:0;">Calculadora de Insumos y Presupuesto</h3>
+            <p class="lumi-body-s" style="margin:2px 0 0 0; color:var(--on-surface-variant);">Mueve los controles y descubre los materiales que necesita tu mural.</p>
+          </div>
+          <span class="tag-pill">Precios CLP Estimados</span>
+        </div>
+
+        <div class="presets" aria-label="Tamaños de muro"><span>Prueba un tamaño</span><button data-size="5,2">Pequeño · 5 × 2 m</button><button data-size="10,3">Mediano · 10 × 3 m</button><button data-size="20,4">Grande · 20 × 4 m</button></div><!-- Sliders -->
+        <div class="calc-inputs">
+          <div class="calc-row">
+            <div style="display:flex; justify-content:space-between;">
+              <label class="lumi-body-m" for="slider-width">Ancho del Muro (m)</label>
+              <span id="val-width" class="lumi-code" style="font-weight:600;">10 m</span>
+            </div>
+            <div class="lumi-slider-container">
+              <input type="range" id="slider-width" class="lumi-slider" data-key="width" min="3" max="25" value="10" step="0.5" style="--progress: 31.8%;">
+            </div>
+          </div>
+
+          <div class="calc-row">
+            <div style="display:flex; justify-content:space-between;">
+              <label class="lumi-body-m" for="slider-height">Alto del Muro (m)</label>
+              <span id="val-height" class="lumi-code" style="font-weight:600;">3 m</span>
+            </div>
+            <div class="lumi-slider-container">
+              <input type="range" id="slider-height" class="lumi-slider" data-key="height" min="1.5" max="6" value="3" step="0.5" style="--progress: 33.3%;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulated Visualizer -->
+        <div class="wall-preview">
+          <div id="wall-sim" class="wall-mural-sim" style="width: 70%; height: 60%;">
+            30.0 m² de Mural
+          </div>
+        </div>
+
+        <!-- Computed Highlights -->
+        <div class="calc-results-grid">
+          <div class="result-box">
+            <span class="result-label">Superficie Total</span>
+            <span id="res-area" class="result-num">30.0 m²</span>
+          </div>
+          <div class="result-box">
+            <span class="result-label">Pintura Base/Color</span>
+            <span id="res-liters" class="result-num">9.0 Litros</span>
+          </div>
+          <div class="result-box">
+            <span class="result-label">Kits de Pinceles/Rodillos</span>
+            <span id="res-kits" class="result-num">6 Kits</span>
+          </div>
+          <div class="result-box highlight">
+            <span class="result-label">Costo Total Estimado</span>
+            <span id="res-total" class="result-num">$285.000</span>
+          </div>
+        </div>
+
+        <p class="estimate-note">Estimación orientativa con los valores de la propuesta original; no corresponde a una cotización actual. Incluye pintura, sellador, herramientas, barniz y logística.</p><button class="download" id="download">↓ Descargar presupuesto CSV</button><!-- Breakdown Table -->
+        <div class="table-wrapper">
+          <table class="cost-table">
+            <thead>
+              <tr>
+                <th>Item / Insumo</th>
+                <th>Rendimiento / Detalle</th>
+                <th>Cant. Est.</th>
+                <th style="text-align:right;">Subtotal CLP</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <!-- Dynamically rendered -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+<section id="panel-inscripcion" class="tab-panel">
+ <div class="info-card"><span class="tag-pill">Escuela Julio Montt Salamanca</span><h2 style="margin:0">Inscripción al concurso</h2><p style="margin:0">Participa en “Muros que Hablan”. Puedes acompañarte de un docente, asistente de la educación, apoderado y/o familiar que desee ayudar.</p><p class="estimate-note">Los datos son obligatorios. Esta inscripción registra tu participación; la entrega del boceto se coordina con el equipo organizador.</p></div>
+ <form id="registration-form" class="info-card registration-form">
+ <fieldset><legend>Datos del estudiante</legend><div class="registration-grid">
+ <label>Nombre completo <span class="required">(obligatorio)</span><input name="nombre" autocomplete="name" required maxlength="150" placeholder="Nombre y apellidos"></label>
+ <label>Curso <span class="required">(obligatorio)</span><input name="curso" required maxlength="60" placeholder="Ej.: 5° básico A"></label>
+ </div></fieldset>
+ <fieldset><legend>Acompañante</legend><div class="registration-grid">
+ <label>Nombre del acompañante<input name="acompanante" maxlength="150" placeholder="Nombre y apellidos"></label>
+ <label>Vínculo con el estudiante<select name="vinculo"><option value="">Selecciona una opción</option><option>Docente</option><option>Asistente de la educación</option><option>Apoderado</option><option>Familiar</option></select></label>
+ <label>Correo de contacto <span class="required">(obligatorio)</span><input name="correo" required type="email" autocomplete="email" maxlength="200" placeholder="correo@ejemplo.cl"></label>
+ <label>Teléfono de contacto del adulto <span class="required">(obligatorio)</span><input name="telefono" required type="tel" autocomplete="tel" maxlength="40" placeholder="Ej.: +56 9 1234 5678"></label>
+ </div></fieldset>
+ <fieldset><legend>Tu propuesta</legend><div class="registration-grid">
+ <label>Título del boceto<input name="titulo" maxlength="200" placeholder="¿Cómo se llama tu idea?"></label>
+ <label>Eje temático<select name="eje"><option value="">Selecciona una opción</option><option>Identidad y comunidad</option><option>Medio ambiente y futuro</option><option>Inclusión y convivencia</option><option>Más de un eje</option></select></label>
+ <label class="full">Cuéntanos tu idea<textarea name="idea" id="field-idea" aria-describedby="count-idea" rows="4" placeholder="Qué te gustaría representar en el mural"></textarea><span class="estimate-note" id="count-idea">Máximo 200 palabras · Quedan 200 palabras</span></label>
+ <label class="full">Comentarios o apoyos que necesitas<textarea name="comentarios" id="field-comentarios" aria-describedby="count-comentarios" rows="3" placeholder="Puedes indicar materiales o ayuda para participar"></textarea><span class="estimate-note" id="count-comentarios">Máximo 200 palabras · Quedan 200 palabras</span></label>
+ </div></fieldset>
+ <p class="estimate-note">Las inscripciones en línea aún no están habilitadas. Este formulario es una vista previa y no envía datos.</p>
+ <div><button type="submit" class="primary" id="register-submit" disabled>Inscripciones próximamente</button></div>
+ <p id="registration-status" role="status" aria-live="polite" tabindex="-1" style="margin:0"></p>
+ </form>
+</section>
+
+    <!-- TAB 6: CRONOGRAMA -->
+    <section id="panel-cronograma" class="tab-panel">
+      <div class="info-card">
+        <h3 class="lumi-headline-s" style="margin:0;">Planificación del Proyecto (6 Semanas)</h3>
+        <p class="lumi-body-s" style="margin:0; color: var(--on-surface-variant);">
+          Hitos principales desde la difusión del concurso hasta la inauguración.
+        </p>
+      </div>
+
+      <div class="timeline-list">
+        <div class="timeline-item">
+          <div class="timeline-badge">S1</div>
+          <div class="timeline-content">
+            <strong class="lumi-body-m">Lanzamiento y Difusión</strong>
+            <span class="lumi-body-s" style="color: var(--on-surface-variant);">Publicación de bases, afiches promocionales y talleres explicativos en horas de orientación.</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">S2-S3</div>
+          <div class="timeline-content">
+            <strong class="lumi-body-m">Recepción de Bocetos</strong>
+            <span class="lumi-body-s" style="color: var(--on-surface-variant);">Plazo abierto para entrega de propuestas individuales o grupales.</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">S4</div>
+          <div class="timeline-content">
+            <strong class="lumi-body-m">Evaluación del Jurado y Premiación</strong>
+            <span class="lumi-body-s" style="color: var(--on-surface-variant);">Deliberación del jurado, anuncio del diseño ganador y compra de insumos.</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">S5</div>
+          <div class="timeline-content">
+            <strong class="lumi-body-m">Preparación del Muro y Trazado</strong>
+            <span class="lumi-body-s" style="color: var(--on-surface-variant);">Limpieza, fijador base y traslado del diseño al muro mediante proyección nocturna o cuadrícula.</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">S6</div>
+          <div class="timeline-content">
+            <strong class="lumi-body-m">Jornada "Pintatón" e Inauguración</strong>
+            <span class="lumi-body-s" style="color: var(--on-surface-variant);">Evento participativo comunal, retoques finales, barniz protector y corte de cinta.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // State management
+    const state = {
+      activeTab: 'inicio',
+      width: 10,
+      height: 3
+    };
+
+    // Prices in CLP
+    const UNIT_PRICES = {
+      basePaintPerLiter: 4500, // Esmalte / Látex exterior
+      primerPerLiter: 3800,    // Fijador / Sellador
+      colorPigmentsPerLiter: 5200, // Tintes y colores especiales
+      brushKit: 8500,          // Set de rodillo + bandeja + brochas
+      protectiveVarnish: 6000, // Barniz protector m2
+      logisticsFixed: 35000     // Cintas, plásticos, colación pintores
+    };
+
+    function formatCLP(val) {
+      return '$' + Math.round(val).toLocaleString('es-CL');
+    }
+
+    // Dynamic Calculator Update
+    function updateCalculator() {
+      const w = state.width;
+      const h = state.height;
+      const area = w * h;
+
+      // Estimate quantities
+      // Yield: approx 8 m2 per liter (2 coats)
+      const basePaintLiters = Math.ceil((area / 8) * 1.2); 
+      const colorLiters = Math.ceil((area / 6) * 1.1);
+      const primerLiters = Math.ceil(area / 10);
+      const brushKits = Math.max(3, Math.ceil(area / 6));
+
+      // Calculate subtotals
+      const costBase = basePaintLiters * UNIT_PRICES.basePaintPerLiter;
+      const costColor = colorLiters * UNIT_PRICES.colorPigmentsPerLiter;
+      const costPrimer = primerLiters * UNIT_PRICES.primerPerLiter;
+      const costKits = brushKits * UNIT_PRICES.brushKit;
+      const costVarnish = Math.ceil(area / 8) * UNIT_PRICES.protectiveVarnish;
+      const costLogistics = UNIT_PRICES.logisticsFixed;
+
+      const totalCost = costBase + costColor + costPrimer + costKits + costVarnish + costLogistics;
+
+      document.getElementById('summary-area').textContent = area.toFixed(1) + ' m²';
+      document.getElementById('summary-total').textContent = formatCLP(totalCost);
+      // Update UI Labels
+      const resArea = document.getElementById('res-area');
+      const resLiters = document.getElementById('res-liters');
+      const resKits = document.getElementById('res-kits');
+      const resTotal = document.getElementById('res-total');
+
+      if (resArea) resArea.textContent = `${area.toFixed(1)} m²`;
+      if (resLiters) resLiters.textContent = `${basePaintLiters + colorLiters} Litros`;
+      if (resKits) resKits.textContent = `${brushKits} Kits`;
+      if (resTotal) resTotal.textContent = formatCLP(totalCost);
+
+      // Wall Visualizer Sim
+      const wallSim = document.getElementById('wall-sim');
+      if (wallSim) {
+        // Clamp aspect ratio visually
+        const widthPct = Math.min(95, Math.max(30, (w / 25) * 100));
+        const heightPct = Math.min(90, Math.max(25, (h / 6) * 100));
+        wallSim.style.width = `${Math.min(94, w / 25 * 94)}%`;
+        wallSim.style.height = 'auto'; wallSim.style.aspectRatio = `${w} / ${h}`;
+        if (wallSim) wallSim.textContent = `${area.toFixed(1)} m² (${w}m × ${h}m)`;
+      }
+
+      // Populate Table
+      const tableBody = document.getElementById('table-body');
+      if (tableBody) {
+        const rows = [
+          { item: 'Esmalte Base Blanco (Exterior)', yield: '8 m²/L (2 manos)', qty: `${basePaintLiters} L`, cost: costBase },
+          { item: 'Pintura Colores Variados', yield: '6 m²/L', qty: `${colorLiters} L`, cost: costColor },
+          { item: 'Sellador / Primario Fijador', yield: '10 m²/L', qty: `${primerLiters} L`, cost: costPrimer },
+          { item: 'Kits de Rodillos, Brochas y Bandejas', yield: '1 kit / 6 m²', qty: `${brushKits} sets`, cost: costKits },
+          { item: 'Barniz Protector Antigraffiti', yield: '8 m²/L', qty: `${Math.ceil(area / 8)} L`, cost: costVarnish },
+          { item: 'Insumos Protección y Logística', yield: 'Plásticos, cintas, colación', qty: '1 Global', cost: costLogistics }
+        ];
+
+        if (tableBody) tableBody.innerHTML = rows.map(r => `
+          <tr>
+            <td><strong>${r.item}</strong></td>
+            <td style="color:var(--on-surface-variant);">${r.yield}</td>
+            <td>${r.qty}</td>
+            <td class="num">${formatCLP(r.cost)}</td>
+          </tr>
+        `).join('');
+      }
+    }
+
+    // Unified View Dispatcher
+    function updateViz() {
+      // 1. Tab Switching
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        const isActive = btn.dataset.tab === state.activeTab;
+        btn.classList.toggle('is-active', isActive); btn.setAttribute('aria-selected', isActive); btn.tabIndex = isActive ? 0 : -1;
+      });
+
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        const isActive = panel.id === `panel-${state.activeTab}`;
+        panel.classList.toggle('is-active', isActive);
+      });
+
+      // 2. Calculator Inputs
+      const valW = document.getElementById('val-width');
+      const valH = document.getElementById('val-height');
+      if (valW) valW.textContent = `${state.width} m`;
+      if (valH) valH.textContent = `${state.height} m`;
+
+      updateCalculator();
+    }
+
+    // Attach Event Handlers
+    function initHandlers() {
+      // Tab Navigation
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          state.activeTab = e.currentTarget.dataset.tab;
+          updateViz();
+        });
+      });
+
+      // Sliders
+      document.querySelectorAll('.lumi-slider').forEach(slider => {
+        slider.addEventListener('input', (e) => {
+          const key = e.target.dataset.key;
+          const val = parseFloat(e.target.value);
+          state[key] = val;
+
+          // Update Slider progress styling
+          const min = parseFloat(e.target.min);
+          const max = parseFloat(e.target.max);
+          const pct = ((val - min) / (max - min)) * 100;
+          e.target.style.setProperty('--progress', `${pct}%`);
+
+          updateViz();
+        });
+      });
+    }
+
+    // Initialization
+    initHandlers();
+    updateViz();
+
+    // Theme & Resize Integration
+    const applyTheme = t => { 
+      document.documentElement.setAttribute('data-theme', t); 
+      if (typeof updateViz === 'function') updateViz(); 
+    };
+
+    if (!document.documentElement.hasAttribute('data-theme') && window.matchMedia?.('(prefers-color-scheme: dark)').matches) {
+      applyTheme('dark');
+    }
+
+    window.addEventListener('message', e => { 
+      if (e.data?.type === 'set-theme' || e.data?.type === 'APPLY_THEME') applyTheme(e.data.theme); 
+    });
+
+    (function autoResize() {
+      function notifyHeight() {
+        const c = document.querySelector('.widget-container') || document.body;
+        if (!c) return;
+        const h = Math.ceil(Math.max(c.getBoundingClientRect().bottom, c.scrollHeight));
+        window.parent.postMessage({type: 'widget-resize', height: h}, '*');
+      }
+      window.addEventListener('load', () => setTimeout(notifyHeight, 120));
+      new ResizeObserver(() => notifyHeight()).observe(document.querySelector('.widget-container') || document.body);
+    })();
+  </script>
+
+<script>/*luminous-slider-normalizer*/(function(){function f(r){if(!r||r.type!=='range')return;var mn=parseFloat(r.min||'0'),mx=parseFloat(r.max||'100'),v=parseFloat(r.value);if(isNaN(v))v=(mn+mx)/2;var p=mx>mn?((v-mn)/(mx-mn))*100:50;r.style.setProperty('--progress',p+'%');r.style.removeProperty('--slider-fill');}function all(){document.querySelectorAll('input[type="range"], .lumi-slider').forEach(f);}document.addEventListener('input',function(e){f(e.target);});if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',all);else all();})();</script>
+<script>
+const tabs=[...document.querySelectorAll('.tab-btn')];
+document.querySelector('.nav-tabs').setAttribute('role','tablist');
+document.querySelector('.nav-tabs').setAttribute('aria-label','Secciones del proyecto');
+tabs.forEach((b,i)=>{b.id='tab-'+b.dataset.tab;b.setAttribute('role','tab');b.setAttribute('aria-controls','panel-'+b.dataset.tab);const p=document.getElementById('panel-'+b.dataset.tab);p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby',b.id);b.addEventListener('keydown',e=>{let n=i;if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;e.preventDefault();tabs[n].click();tabs[n].focus()})});
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{state.activeTab=b.dataset.go;updateViz();document.querySelector('.nav-tabs-wrapper').scrollIntoView({behavior:'smooth',block:'start'})});
+document.querySelectorAll('[data-size]').forEach(b=>b.onclick=()=>{[state.width,state.height]=b.dataset.size.split(',').map(Number);for(const k of ['width','height']){const el=document.getElementById('slider-'+k);el.value=state[k];el.dispatchEvent(new Event('input',{bubbles:true}))}});
+document.getElementById('download').onclick=()=>{const rows=[['Presupuesto Muros que Hablan'],['Dimensiones',state.width+' m',state.height+' m'],...Array.from(document.querySelectorAll('.cost-table tr'),r=>Array.from(r.children,c=>c.innerText)),['Total estimado',document.getElementById('res-total').innerText],['Valores orientativos de la propuesta original']];const csv='\ufeff'+rows.map(r=>r.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(';')).join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='presupuesto-muros-que-hablan.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+</script><footer>MUROS QUE HABLAN <span>El arte nos reúne. - Creado por Sandy Cadín Azócar</span></footer><script>
+document.querySelectorAll('.day-form').forEach(form=>{
+ const select=form.querySelector('select');
+ const status=form.querySelector('.day-status');
+ const key='muros-que-hablan:pintaton:dia:'+form.dataset.step;
+ try {const saved=localStorage.getItem(key);if(saved && [...select.options].some(o=>o.value===saved)){select.value=saved;status.textContent='Guardado: '+saved;}}catch(e){}
+ select.addEventListener('change',()=>{status.textContent='Cambio sin guardar';});
+ form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;try{localStorage.setItem(key,select.value);status.textContent='Guardado: '+select.value;}catch(e){status.textContent='No se pudo guardar en este navegador.';}});
+});
+</script><script>
+const registrationForm=document.getElementById('registration-form');
+let registrationKey=crypto.randomUUID ? crypto.randomUUID() : Date.now()+'-'+Math.random().toString(36).slice(2);
+registrationForm.addEventListener('input',()=>{document.getElementById('registration-status').textContent='';});
+registrationForm.addEventListener('submit',async event=>{
+ event.preventDefault();document.getElementById('registration-status').textContent='Las inscripciones en línea aún no están habilitadas.';return;
+ if(!registrationForm.reportValidity())return;
+ const status=document.getElementById('registration-status');const button=document.getElementById('register-submit');
+ const data=Object.fromEntries(new FormData(registrationForm));
+ if(['nombre','curso','correo','telefono'].some(key=>!data[key].trim())){status.textContent='Completa nombre, curso, correo y teléfono para continuar.';return;}
+ button.disabled=true;status.textContent='Guardando inscripción…';
+ try{const response=await fetch('/api/inscripciones',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...data,id:registrationKey})});
+ const result=await response.json();if(!response.ok)throw new Error(result.error||'No se pudo guardar.');
+ status.textContent='¡Inscripción guardada! Tu comprobante es '+result.codigo+'.';registrationForm.reset();registrationKey=crypto.randomUUID ? crypto.randomUUID() : Date.now()+'-'+Math.random().toString(36).slice(2);status.focus();
+ }catch(error){status.textContent='No se pudo guardar la inscripción. Verifica que la web esté abierta desde el servidor de la organización e inténtalo otra vez. Tus datos siguen en el formulario.';}
+ finally{button.disabled=false;}
+});
+</script><script>
+const registrationTab=document.querySelector('.tab-btn[data-tab="inscripcion"]');
+registrationTab.addEventListener('click',()=>registrationTab.classList.add('registration-visited'));
+</script><script>
+for(const name of ['idea','comentarios']){
+ const field=document.getElementById('field-'+name),counter=document.getElementById('count-'+name);
+ const update=()=>{const total=field.value.trim()?field.value.trim().split(/\s+/u).length:0;const left=200-total;field.setCustomValidity(left<0?'Reduce el texto a un máximo de 200 palabras.':'');counter.textContent=left<0?'Sobran '+(-left)+' palabras. Máximo 200 palabras.':'Máximo 200 palabras · '+(left===1?'Queda 1 palabra':'Quedan '+left+' palabras');};
+ field.addEventListener('input',update);registrationForm.addEventListener('reset',()=>setTimeout(update,0));update();
+}
+</script></body>
+</html>

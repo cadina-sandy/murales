@@ -1,0 +1,6 @@
+.vercel/
+.env*
+*.sqlite3
+*.csv
+datos-inscripciones/
+.DS_Store
