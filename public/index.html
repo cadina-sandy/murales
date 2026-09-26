@@ -16,6 +16,8 @@
 .tab-btn[data-tab="inscripcion"].registration-visited:hover{background:#dcf77e}
 @keyframes registration-pulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(41,77,223,.2)}50%{transform:scale(1.035);box-shadow:0 0 0 5px rgba(41,77,223,0)}}
 @media(prefers-reduced-motion:reduce){.tab-btn[data-tab="inscripcion"]:not(.registration-visited){animation:none}}
+
+#companion-fields[hidden]{display:none}#companion-fields{margin-top:18px}#add-companion{font-weight:600;color:#244bdd;background:#edf1ff}
 </style></head><body>
   <div class="widget-container"><div class="topbar"><a href="#inicio" class="brand">M<span>H</span> <small>MUROS QUE HABLAN</small></a><span class="topnote">Una creación colectiva</span></div>
     
@@ -272,9 +274,11 @@
  <label>Nombre completo <span class="required">(obligatorio)</span><input name="nombre" autocomplete="name" required maxlength="150" placeholder="Nombre y apellidos"></label>
  <label>Curso <span class="required">(obligatorio)</span><input name="curso" required maxlength="60" placeholder="Ej.: 5° básico A"></label>
  </div></fieldset>
- <fieldset><legend>Acompañante</legend><div class="registration-grid">
- <label>Nombre del acompañante<input name="acompanante" maxlength="150" placeholder="Nombre y apellidos"></label>
- <label>Vínculo con el estudiante<select name="vinculo"><option value="">Selecciona una opción</option><option>Docente</option><option>Asistente de la educación</option><option>Apoderado</option><option>Familiar</option></select></label>
+ <fieldset><legend>Acompañante</legend><button type="button" id="add-companion" aria-expanded="false" aria-controls="companion-fields">+ Agregar acompañante</button><div id="companion-fields" class="registration-grid" hidden>
+ <label>Nombre del acompañante<input name="acompanante" disabled maxlength="150" placeholder="Nombre y apellidos"></label>
+ <label>Vínculo con el estudiante<select name="vinculo" disabled><option value="">Selecciona una opción</option><option>Docente</option><option>Asistente de la educación</option><option>Apoderado</option><option>Familiar</option><option>Estudiante</option></select></label>
+ </div></fieldset>
+ <fieldset><legend>Datos de contacto</legend><div class="registration-grid">
  <label>Correo de contacto <span class="required">(obligatorio)</span><input name="correo" required type="email" autocomplete="email" maxlength="200" placeholder="correo@ejemplo.cl"></label>
  <label>Teléfono de contacto del adulto <span class="required">(obligatorio)</span><input name="telefono" required type="tel" autocomplete="tel" maxlength="40" placeholder="Ej.: +56 9 1234 5678"></label>
  </div></fieldset>
@@ -555,5 +559,19 @@ for(const name of ['idea','comentarios']){
  const update=()=>{const total=field.value.trim()?field.value.trim().split(/\s+/u).length:0;const left=200-total;field.setCustomValidity(left<0?'Reduce el texto a un máximo de 200 palabras.':'');counter.textContent=left<0?'Sobran '+(-left)+' palabras. Máximo 200 palabras.':'Máximo 200 palabras · '+(left===1?'Queda 1 palabra':'Quedan '+left+' palabras');};
  field.addEventListener('input',update);registrationForm.addEventListener('reset',()=>setTimeout(update,0));update();
 }
+</script><script>
+const companionButton=document.getElementById('add-companion');
+const companionFields=document.getElementById('companion-fields');
+function setCompanionVisible(visible){
+ companionFields.hidden=!visible;
+ companionButton.setAttribute('aria-expanded',String(visible));
+ companionButton.textContent=visible?'− Quitar acompañante':'+ Agregar acompañante';
+ companionFields.querySelectorAll('input,select').forEach(field=>field.disabled=!visible);
+}
+companionButton.addEventListener('click',()=>{
+ const visible=companionFields.hidden;setCompanionVisible(visible);
+ if(visible)companionFields.querySelector('input').focus();
+});
+registrationForm.addEventListener('reset',()=>setCompanionVisible(false));
 </script></body>
 </html>
